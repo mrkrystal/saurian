@@ -1,5 +1,5 @@
 # Saurian
-Tools and resources related to the Saurian cypher language from Star Fox Adventures.
+Tools and resources related to the Saurian cipher language from Star Fox Adventures.
 
 ## [Saurian Translator](https://saurian.krystalarchive.com/) v7
 

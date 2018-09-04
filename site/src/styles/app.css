@@ -1,0 +1,219 @@
+.app {
+    position: relative;
+    overflow-x: hidden;
+}
+.app:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: -64px;
+    right: -64px;
+    height: 100%;
+    background: url(../images/carbon.svg) center top #3d3d3d;
+    background-size: 20px;
+    box-shadow: inset 0 2px 16px #000;
+}
+
+.app .formBox {
+    padding: 16px;
+}
+
+.app .form {
+    box-shadow: 0 2px 16px #000;
+    background: #f4f4f4;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.app .itemBox {
+    padding-bottom: 16px;
+}
+
+.app .textBox {
+    background: #fff;
+    border: 1px solid #666;
+    border-radius: 4px;
+    position: relative;
+    width: 100%;
+    height: 155px;
+    overflow: auto;
+
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.app .textBox.focus {
+    border-color: hsl(225, 100%, 75%);
+    box-shadow: 0 0 0 2px hsl(225, 100%, 75%);
+}
+
+.app .title {
+    padding-bottom: 4px;
+    line-height: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.app .title:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.app label {
+    margin-right: 8px;
+    font-size: 24px;
+    font-weight: normal;
+    float: left;
+}
+
+.app textarea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 150px;
+    padding: 8px;
+    font: 24px monospace;
+    white-space: pre-wrap;
+    overflow: hidden;
+    word-wrap: break-word;
+    background: transparent;
+    resize: none;
+}
+
+.app .highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 150px;
+    padding: 8px;
+    font: 24px monospace;
+    white-space: pre-wrap;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.app .highlight span {
+    border-radius: 2px;
+    background: #ffd200;
+    box-shadow: 0 0 0 2px #ffd200;
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: rgba(20, 0, 0, 0.3);
+    word-wrap: break-word;
+}
+
+.app .highlight span.active {
+    opacity: 1;
+}
+
+.app button {
+    font-size: 16px;
+    padding: 0 8px;
+    border: 1px solid #666;
+    border-radius: 4px;
+    background: linear-gradient(#eee, #ccc);
+    color: #000;
+    cursor: pointer;
+    height: 24px;
+    vertical-align: text-bottom;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.app button:hover {
+    background: linear-gradient(#fff, #ddd);
+}
+
+.app button:active {
+    background: linear-gradient(#ccc, #eee);
+}
+
+.app button:focus {
+    border-color: hsl(225, 100%, 75%);
+    box-shadow: 0 0 0 2px hsl(225, 100%, 75%);
+}
+
+.app .pronunciationBox {
+    border-radius: 8px 4px 4px 4px;
+    background: #ddd;
+}
+
+.app .pronunciationBox .items {
+    padding: 16px 16px 0 16px;
+}
+
+.app .pronunciationBox.hide {
+    background: transparent;
+}
+
+.app .pronunciationBox.hide .items {
+    display: none;
+}
+
+.app .pronunciation {
+    padding: 8px;
+    border-radius: 4px;
+    font: 22px monospace;
+    background: #fff;
+    white-space: pre-wrap;
+}
+
+.app .icon {
+    display: inline-block;
+    font-size: 16px;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 24px;
+    background-color: hsl(225, 100%, 65%);
+
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.app .icon:hover {
+    background-color: hsl(235, 100%, 65%);
+}
+
+.app .icon:focus {
+    box-shadow: 0 0 0 2px hsl(225, 100%, 75%);
+}
+
+@media (min-width: 800px) {
+    .app .formBox {
+        padding: 32px;
+    }
+
+    .app .form {
+        padding: 16px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .app .form {
+        max-width: 1200px;
+    }
+
+    .app .items {
+        display: flex;
+    }
+
+    .app .itemBox {
+        flex: 1;
+    }
+
+    .app .itemBox:first-child {
+        padding-right: 8px;
+    }
+
+    .app .itemBox:last-child {
+        padding-left: 8px;
+    }
+}

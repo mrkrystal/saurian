@@ -1,0 +1,118 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Saurian Translator</title>
+
+<style>
+    @import 'styles/reset.css';
+    @import 'styles/body.css';
+    @import 'styles/app.css';
+    @import 'styles/helpers.css';
+</style>
+
+<noscript><div class="noJs"><div class="body">Please <a href="https://www.enable-javascript.com/">Enable Javascript</a> to use the Saurian Translator.</div></div></noscript>
+
+<div class="body">
+    <h1>Saurian Translator <span class="flavor">v8</span></h1>
+</div>
+
+<div class="app">
+    <div class="formBox">
+        <div class="form">
+            <div class="items">
+                <div class="itemBox">
+                    <div class="title">
+                        <label for="e">English</label>
+                        <button id="ePN" tab-index="0" type="button">Detect Proper Nouns</button>
+                    </div>
+                    <div id="eB" class="textBox">
+                        <div id="eH" class="highlight"></div>
+                        <textarea id="e" placeholder="Start typing to begin translation." rows="4" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" tab-index="0"></textarea>
+                    </div>
+                </div>
+
+                <div class="itemBox">
+                    <div class="title">
+                        <label for="s">Saurian</label>
+                        <button id="sPN" tab-index="0" type="button">Detect Proper Nouns</button>
+                    </div>
+                    <div id="sB" class="textBox">
+                        <div id="sH" class="highlight"></div>
+                        <textarea id="s" placeholder="Jkuhk k0fadw ke rowad khudjcukaed." rows="4" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" tab-index="0"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div id="p" class="pronunciationBox hide">
+                <button id="pB" tab-index="0" type="button">▶ Show Pronunciations</button>
+
+                <div class="items">
+                    <div class="itemBox">
+                        <div class="title">
+                            <label>IPA</label>
+                            <a href="https://infogalactic.com/info/International_Phonetic_Alphabet" class="icon" tab-index="0">?</a>
+                        </div>
+                        <div id="i" class="pronunciation"></div>
+                    </div>
+
+                    <div class="itemBox">
+                        <div class="title">
+                            <label>Common Pronunciation</label>
+                        </div>
+                        <div id="c" class="pronunciation"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="body">
+    <h2>Saurian Translator <span class="flavor">v8</span></h2>
+
+    <p>The translator above converts back and forth between English and Saurian in real time. Proper nouns should not be translated between languages. Adding a backslash (\) on either side of proper nouns will prevent their translation. Clicking the Detect Proper Nouns buttons will attempt to automatically find and annotate proper nouns.</p>
+
+    <h3>About Saurian</h3>
+
+    <p>In the game <a href="http://starfox.wikia.com/wiki/Star_Fox_Adventures" tab-index="0">Star Fox Adventures</a>, <a href="https://krystalarchive.com/" tab-index="0">Krystal</a> and the natives of Dinosaur Planet speak in a <a href="https://infogalactic.com/info/Substitution_cipher" tab-index="0">cipher langauge</a> known as Dino Language. In later Star Fox games, Dinosaur Planet would come to be known as <a href="http://starfox.wikia.com/wiki/Sauria" tab-index="0">Sauria</a>. The term Saurian was chosen as an unofficial term for the fictional language because it is easier to say and the planet's name changed. <a href="https://www.youtube.com/watch?v=42Og4uROeHg" tab-index="0">Watch this video</a> to see an example of Saurian being spoken in the game.</p>
+
+    <h3>Conversion Rules</h3>
+
+    <p>According to the Star Fox Adventures Instruction Manual, <a href="http://nintendo.wikia.com/wiki/File:Star_Fox_Adventures_Manual_page0017.jpg" tab-index="0">page 28</a>, these are the rules of converting between English and Saurian.</p>
+
+    <h4>Vowels</h4>
+    <p>
+        The vowels are shifted 2 vowel positions forward when translating to Saurian.
+        <span class="compare">A E I O U - English</span>
+        <span class="compare">U O A E I - Saurian</span>
+    </p>
+
+    <h4>Letter M</h4>
+    <p>
+        The letter M does not change during translation.
+        <span class="compare">M - English</span>
+        <span class="compare">M - Saurian</span>
+    </p>
+
+    <h4>Letter Y</h4>
+    <p>
+        Saurian does not have a Y letter, so a zero (0) is used as a placeholder.
+        <span class="compare">Y - English</span>
+        <span class="compare">0 - Saurian</span>
+    </p>
+
+    <h4>Remaining Letters</h4>
+    <p>
+        The remaining letters are shifted approximately 12 positions forward.
+        <span class="compare">B C D F G H J K L N P Q R S T V W X Z - English</span>
+        <span class="compare">R S T V W X Z B C D F G H J K L N P Q - Saurian</span>
+    </p>
+
+    <h3>More Info</h3>
+
+    <p>For more information about the Saurian language, and the tools, techniques, and code for this site, please visit the <a href="https://github.com/mrkrystal/saurian" tab-index="0">Github Repository</a>.</p>
+
+    <p class="copyright">© 2018 <a href="https://krystalarchive.com" tab-index="0">Krystal Archive</a></p>
+</div>
+
+
+<script src="scripts/main.js"></script>

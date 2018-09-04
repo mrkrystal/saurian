@@ -1,0 +1,10 @@
+.flavor {
+    font-size: 0.75em;
+    color: #888;
+}
+
+.noJs {
+    text-align: center;
+    background: hsl(0, 100%, 90%);
+    border-bottom: 4px solid hsl(0, 100%, 80%);
+}

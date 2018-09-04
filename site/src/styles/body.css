@@ -1,0 +1,97 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    background: url(../images/white.svg) #e7e7e7;
+    background-size: 4px;
+    color: #222;
+}
+
+.body {
+    margin: 0 auto;
+    padding: 8px;
+    max-width: 800px;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+.body h1 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 32px;
+    color: #666;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.body h2 {
+    font-size: 32px;
+    font-weight: normal;
+    padding-bottom: 4px;
+    color: #666;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.body h3 {
+    font-size: 28px;
+    font-weight: normal;
+    padding-bottom: 4px;
+    color: #444;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.body p {
+    padding-bottom: 32px;
+}
+
+.body a {
+    padding: 0 2px 1px 2px;
+    text-decoration: none;
+    margin-bottom: 0;
+    padding-bottom: 1px;
+    color: hsl(225, 100%, 65%);
+    border-bottom: 1px solid hsl(225, 100%, 65%);
+
+    transition: color 0.3s, border-color 0.3s, padding-bottom 0.3s, margin-bottom 0.3s;
+}
+
+.body a:hover {
+    color: hsl(235, 100%, 65%);
+    border-color: 1px solid hsl(235, 100%, 65%);
+}
+
+.body a:active {
+    padding-bottom: 0;
+    margin-bottom: 1px;
+}
+
+.body a:focus {
+    border-style: dotted;
+}
+
+.body h4 {
+    padding-bottom: 2px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #666;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.body .compare {
+    padding-top: 4px;
+    font: 16px monospace;
+    display: block;
+}
+
+.body .copyright {
+    padding-bottom: 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+@media (min-width: 800px) {
+    .body {
+        padding: 16px;
+    }
+
+    .body h1 {
+        font-size: 48px;
+    }
+}
