@@ -1,6 +1,7 @@
 .app {
     position: relative;
     overflow-x: hidden;
+    min-height: 300px;
 }
 .app:before {
     content: '';
@@ -136,6 +137,13 @@
 .app button:focus {
     border-color: hsl(225, 100%, 75%);
     box-shadow: 0 0 0 2px hsl(225, 100%, 75%);
+}
+
+.app button:disabled {
+    border-color: hsl(225, 0%, 75%);
+    background: #ccc;
+    color: #444;
+    cursor: not-allowed;
 }
 
 .app .pronunciationBox {

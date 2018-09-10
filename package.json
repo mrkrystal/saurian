@@ -1,0 +1,31 @@
+{
+  "name": "saurian",
+  "version": "8.0.0",
+  "description": "\"The Krystal Archive's research on, and app for, translating between English and Dino Language from Star Fox Adventures.\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrkrystal/saurian.git"
+  },
+  "keywords": [
+    "saurian",
+    "krystal",
+    "starfox",
+    "star",
+    "fox",
+    "dino",
+    "cipher"
+  ],
+  "author": "Mr. Krystal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrkrystal/saurian/issues"
+  },
+  "homepage": "https://github.com/mrkrystal/saurian#readme",
+  "dependencies": {
+    "hyperhtml": "^2.13.0"
+  }
+}
