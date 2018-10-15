@@ -1,0 +1,164 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Saurian Translator</title>
+
+<style>
+    @import 'styles/vars.css';
+    @import 'styles/reset.css';
+    @import 'styles/body.css';
+    @import 'styles/app.css';
+    @import 'styles/button.css';
+    @import 'styles/focusable.css';
+    @import 'styles/helpers.css';
+</style>
+
+<noscript><div class="noJs"><div class="body">Please <a href="https://www.enable-javascript.com/">Enable Javascript</a> to use the Saurian Translator.</div></div></noscript>
+
+<div class="body">
+    <h1 class="heading">Saurian Translator <span class="flavor">v8</span></h1>
+</div>
+
+<div class="app">
+    <div class="form">
+        <div class="columns">
+            <div class="column">
+                <div class="columnLayout">
+                    <div class="titleBar">
+                        <label for="english" class="title">English</label>
+                        <button id="englishProperNoun" class="button focusable" disabled tab-index="0" type="button">Detect Proper Nouns</button>
+                    </div>
+                    <div class="falseTextareaBox focusable">
+                        <div class="falseTextarea">
+                            <div class="scrollingBox">
+                                <div class="relativeHeightBox">
+                                    <div class="textPadding">
+                                        <div id="englishWords" class="text"></div>
+                                        <span class="text">&nbsp;</span>
+                                    </div>
+                                    <textarea id="english" class="textarea text textPadding" placeholder="Start typing to begin translation." autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="true" tab-index="0"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="columnLayout">
+                    <div class="titleBar">
+                        <label for="saurian" class="title">Saurian</label>
+                        <button id="saurianProperNoun" class="button focusable" disabled tab-index="0" type="button">Detect Proper Nouns</button>
+                    </div>
+                    <div class="falseTextareaBox focusable">
+                        <div class="falseTextarea">
+                            <div class="scrollingBox">
+                                <div class="relativeHeightBox">
+                                    <div class="textPadding">
+                                        <div id="saurianWords" class="text"></div>
+                                        <span class="text">&nbsp;</span>
+                                    </div>
+                                    <textarea id="saurian" class="textarea text textPadding" placeholder="Jkuhk k0fadw ke rowad khudjcukaed." autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" tab-index="0"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button id="tooglePronunciationButton" class="button focusable" tab-index="0" type="button">▶ Pronunciations</button>
+
+        <div id="pronunciationBox" class="pronunciationBox">
+            <div class="columns">
+                <div class="column">
+                    <div class="columnLayout">
+                        <div class="titleBar">
+                            <label class="title">IPA</label>
+                            <a href="https://infogalactic.com/info/International_Phonetic_Alphabet" class="icon button active focusable" tab-index="0">?</a>
+                        </div>
+                        <div class="falseTextareaBox">
+                            <div class="falseTextarea pronunciationFalseTextarea">
+                                <div class="scrollingBox">
+                                    <div class="relativeHeightBox">
+                                        <div class="textPadding">
+                                            <div id="ipaWords" class="text"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="columnLayout">
+                        <div class="titleBar">
+                            <label class="title">Common Pronunciation</label>
+                        </div>
+                        <div class="falseTextareaBox">
+                            <div class="falseTextarea pronunciationFalseTextarea">
+                                <div class="scrollingBox">
+                                    <div class="relativeHeightBox">
+                                        <div class="textPadding">
+                                            <div id="commonWords" class="text"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="body">
+    <h2 class="heading">Saurian Translator <span class="flavor">v8</span></h2>
+
+    <p>The translator above converts back and forth between English and Saurian in real time. Proper nouns should not be translated between languages. Adding a backtick (`) on either side of proper nouns will prevent their translation. Clicking the Detect Proper Nouns buttons will attempt to automatically find and annotate proper nouns.</p>
+
+    <h3 class="heading">About Saurian</h3>
+
+    <p>In the game <a href="http://starfox.wikia.com/wiki/Star_Fox_Adventures" tab-index="0">Star Fox Adventures</a>, <a href="https://krystalarchive.com/" tab-index="0">Krystal</a> and the natives of Dinosaur Planet speak in a <a href="https://infogalactic.com/info/Substitution_cipher" tab-index="0">cipher langauge</a> known as Dino Language. In later Star Fox games, Dinosaur Planet would come to be known as <a href="http://starfox.wikia.com/wiki/Sauria" tab-index="0">Sauria</a>. The term Saurian was chosen as an unofficial term for the fictional language because it is easier to say and the planet's name changed. <a href="https://www.youtube.com/watch?v=42Og4uROeHg" tab-index="0">Watch this video</a> to see an example of Saurian being spoken in the game.</p>
+
+    <h3 class="heading">Conversion Rules</h3>
+
+    <p>According to the Star Fox Adventures Instruction Manual, <a href="http://nintendo.wikia.com/wiki/File:Star_Fox_Adventures_Manual_page0017.jpg" tab-index="0">page 28</a>, these are the rules of converting between English and Saurian.</p>
+
+    <h4 class="heading">Vowels</h4>
+    <p>
+        The vowels are shifted 2 vowel positions forward when translating to Saurian.
+        <span class="compare">A E I O U - English</span>
+        <span class="compare">U O A E I - Saurian</span>
+    </p>
+
+    <h4 class="heading">Letter M</h4>
+    <p>
+        The letter M does not change during translation.
+        <span class="compare">M - English</span>
+        <span class="compare">M - Saurian</span>
+    </p>
+
+    <h4 class="heading">Letter Y</h4>
+    <p>
+        Saurian does not have a Y letter, so a zero (0) is used as a placeholder.
+        <span class="compare">Y - English</span>
+        <span class="compare">0 - Saurian</span>
+    </p>
+
+    <h4 class="heading">Remaining Letters</h4>
+    <p>
+        The remaining letters are shifted approximately 12 positions forward.
+        <span class="compare">B C D F G H J K L N P Q R S T V W X Z - English</span>
+        <span class="compare">R S T V W X Z B C D F G H J K L N P Q - Saurian</span>
+    </p>
+
+    <h3 class="heading">More Info</h3>
+
+    <p>For more information about the Saurian language, and the tools, techniques, and code for this site, please visit the <a href="https://github.com/mrkrystal/saurian" tab-index="0">Github Repository</a>.</p>
+
+    <p class="copyright">© 2018 <a href="https://krystalarchive.com" tab-index="0">Krystal Archive</a></p>
+</div>
+
+<script src="scripts/app.js"></script>

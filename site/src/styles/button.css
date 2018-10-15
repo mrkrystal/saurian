@@ -1,0 +1,48 @@
+.button {
+    font-size: 16px;
+    padding: 0 8px;
+    border-radius: 5px;
+    background: var(--button-default-top-color);
+    background: linear-gradient(var(--button-default-top-color), var(--button-default-bottom-color));
+    color: var(--text-default-color);
+    cursor: pointer;
+    user-select: none;
+    height: 24px;
+    line-height: 22px;
+    text-align: center;
+    vertical-align: text-bottom;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.button:hover {
+    background: var(--button-default-top-hover-color);
+    background: linear-gradient(var(--button-default-top-hover-color), var(--button-default-bottom-hover-color));
+}
+
+.button:active {
+    background: var(--button-default-top-active-color);
+    background: linear-gradient(var(--button-default-top-active-color), var(--button-default-bottom-active-color));
+}
+
+.button.active {
+    color: var(--text-inverse-color);
+    background: var(--button-active-top-color);
+    background: linear-gradient(var(--button-active-top-color), var(--button-active-bottom-color));
+}
+
+.button.active:hover {
+    background: var(--button-active-top-hover-color);
+    background: linear-gradient(var(--button-active-top-hover-color), var(--button-active-bottom-hover-color));
+}
+
+.button.active:active {
+    background: var(--button-active-top-active-color);
+    background: linear-gradient(var(--button-active-top-active-color), var(--button-active-bottom-active-color));
+}
+
+.button:disabled, .button.active:disabled {
+    border-color: var(--disabled-main-color);
+    background: var(--disabled-main-color);
+    color: var(--text-disabled-color);
+    cursor: not-allowed;
+}

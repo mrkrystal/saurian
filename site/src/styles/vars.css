@@ -1,0 +1,47 @@
+:root {
+    --text-default-color: hsl(0, 0%, 15%);
+    --text-secondary-color: hsl(0, 0%, 25%);
+    --text-flavor-color: hsl(0, 0%, 50%);
+
+    --text-inverse-color: #fff;
+    --text-contrast-shadow-color: #fff;
+
+    --input-color: #fff;
+    --focus-border-color: hsl(0, 0%, 25%);
+
+    --shadow-color: #000;
+
+    --highlight-color: hsl(50, 100%, 50%);
+
+    --background-dark-carbon-color: hsl(0, 0%, 25%);
+    --background-light-carbon-color: hsl(0, 0%, 90%);
+    --background-form-color: hsl(0, 0%, 95%);
+    --background-pronunciation-color: hsl(0, 0%, 80%);
+
+    --vibrant-color: hsl(210, 100%, 50%);
+    --vibrant-darker-color: hsl(210, 100%, 40%);
+    --vibrant-darkest-color: hsl(210, 100%, 30%);
+
+    --warning-primary: hsl(0, 100%, 90%);
+    --warning-secondary: hsl(0, 100%, 80%);
+
+    --disabled-main-color: hsl(0, 0%, 75%);
+    --text-disabled-color: hsl(0, 0%, 50%);
+
+    --button-default-top-color: hsl(0, 0%, 90%);
+    --button-default-bottom-color: hsl(0, 0%, 80%);
+    --button-default-top-hover-color: hsl(0, 0%, 95%);
+    --button-default-bottom-hover-color: hsl(0, 0%, 85%);
+    --button-default-top-active-color: hsl(0, 0%, 85%);
+    --button-default-bottom-active-color: hsl(0, 0%, 95%);
+
+    --button-active-top-color: hsl(210, 100%, 30%);
+    --button-active-bottom-color: hsl(210, 100%, 40%);
+    --button-active-top-hover-color: hsl(210, 100%, 40%);
+    --button-active-bottom-hover-color: hsl(210, 100%, 50%);
+    --button-active-top-active-color: hsl(210, 100%, 30%);
+    --button-active-bottom-active-color: hsl(210, 100%, 50%);
+
+    --max-body-width: 800px;
+    --text-area-height: 132px; /* Big enough for 4 lines, plus padding, plus borders, plus a little breathing room */
+}

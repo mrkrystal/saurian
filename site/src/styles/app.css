@@ -1,8 +1,9 @@
 .app {
     position: relative;
     overflow-x: hidden;
-    min-height: 300px;
+    padding: 0 16px;
 }
+
 .app:before {
     content: '';
     display: block;
@@ -11,51 +12,38 @@
     left: -64px;
     right: -64px;
     height: 100%;
-    background: url(../images/carbon.svg) center top #3d3d3d;
+    background: url(../images/carbon.svg) center top var(--background-dark-carbon-color);
     background-size: 20px;
-    box-shadow: inset 0 2px 16px #000;
-}
-
-.app .formBox {
-    padding: 16px;
+    box-shadow: inset 0 2px 16px var(--shadow-color);
 }
 
 .app .form {
-    box-shadow: 0 2px 16px #000;
-    background: #f4f4f4;
-    max-width: 800px;
-    margin: 0 auto;
+    margin: 16px 0;
     padding: 8px;
-    border-radius: 8px;
+    border-radius: 12px;
+    background: var(--background-form-color);
 }
 
-.app .itemBox {
-    padding-bottom: 16px;
-}
-
-.app .textBox {
-    background: #fff;
-    border: 1px solid #666;
-    border-radius: 4px;
-    position: relative;
-    width: 100%;
-    height: 155px;
-    overflow: auto;
-
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.app .textBox.focus {
-    border-color: hsl(225, 100%, 75%);
-    box-shadow: 0 0 0 2px hsl(225, 100%, 75%);
-}
-
-.app .title {
+.app .titleBar {
     padding-bottom: 4px;
     line-height: 28px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+}
+
+.app .titleBar:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.app .title {
+    margin-right: 8px;
+    font-size: 24px;
+    font-weight: normal;
+    color: var(--text-secondary-color);
+    float: left;
 }
 
 .app .title:after {
@@ -64,164 +52,133 @@
     clear: both;
 }
 
-.app label {
-    margin-right: 8px;
-    font-size: 24px;
-    font-weight: normal;
-    float: left;
+.app .columnLayout {
+    padding-bottom: 8px;
 }
 
-.app textarea {
+.falseTextareaBox {
+    width: 100%;
+    height: var(--text-area-height);
+    border-radius: 5px;
+    background: var(--input-color);
+    overflow: hidden;
+    position: relative;
+}
+
+.app .falseTextarea {
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 150px;
-    padding: 8px;
-    font: 24px monospace;
-    white-space: pre-wrap;
-    overflow: hidden;
-    word-wrap: break-word;
-    background: transparent;
-    resize: none;
+    height: 100%;
+
+    contain: strict;
 }
 
-.app .highlight {
-    position: absolute;
-    top: 0;
-    left: 0;
+.app .scrollingBox {
     width: 100%;
-    min-height: 150px;
-    padding: 8px;
-    font: 24px monospace;
-    white-space: pre-wrap;
-    overflow: hidden;
-    word-wrap: break-word;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
-.app .highlight span {
+.app .relativeHeightBox {
+    position: relative;
+    min-height: 100%;
+}
+
+.app .textPadding {
+    padding: 8px;
+}
+
+.app .text {
+    font: 24px monospace;
+    line-height: 28px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    width: 100%;
+}
+
+.app .text .word {
     border-radius: 2px;
-    background: #ffd200;
-    box-shadow: 0 0 0 2px #ffd200;
+    background: var(--highlight-color);
+    box-shadow: 0 0 0 2px var(--highlight-color);
+    color: transparent;
+    word-wrap: break-word;
+
     opacity: 0;
     transition: opacity 0.3s;
-    color: rgba(20, 0, 0, 0.3);
-    word-wrap: break-word;
 }
 
-.app .highlight span.active {
+.app .text .word.active {
     opacity: 1;
 }
 
-.app button {
-    font-size: 16px;
-    padding: 0 8px;
-    border: 1px solid #666;
-    border-radius: 4px;
-    background: linear-gradient(#eee, #ccc);
-    color: #000;
-    cursor: pointer;
-    height: 24px;
-    vertical-align: text-bottom;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.app button:hover {
-    background: linear-gradient(#fff, #ddd);
-}
-
-.app button:active {
-    background: linear-gradient(#ccc, #eee);
-}
-
-.app button:focus {
-    border-color: hsl(225, 100%, 75%);
-    box-shadow: 0 0 0 2px hsl(225, 100%, 75%);
-}
-
-.app button:disabled {
-    border-color: hsl(225, 0%, 75%);
-    background: #ccc;
-    color: #444;
-    cursor: not-allowed;
+.app .textarea {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    resize: none;
+    overflow: hidden;
 }
 
 .app .pronunciationBox {
-    border-radius: 8px 4px 4px 4px;
-    background: #ddd;
-}
-
-.app .pronunciationBox .items {
-    padding: 16px 16px 0 16px;
-}
-
-.app .pronunciationBox.hide {
-    background: transparent;
-}
-
-.app .pronunciationBox.hide .items {
+    margin-top: 8px;
+    padding: 8px 8px 0 8px;
+    border-radius: 5px;
     display: none;
+    background: var(--background-pronunciation-color);
 }
 
-.app .pronunciation {
-    padding: 8px;
-    border-radius: 4px;
-    font: 22px monospace;
-    background: #fff;
-    white-space: pre-wrap;
+.app .pronunciationBox.active {
+    display: block;
 }
 
-.app .icon {
-    display: inline-block;
-    font-size: 16px;
-    width: 22px;
-    height: 22px;
-    line-height: 22px;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-    border-radius: 24px;
-    background-color: hsl(225, 100%, 65%);
-
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-.app .icon:hover {
-    background-color: hsl(235, 100%, 65%);
-}
-
-.app .icon:focus {
-    box-shadow: 0 0 0 2px hsl(225, 100%, 75%);
+.app .pronunciationFalseTextarea {
+    border: 0;
+    border-radius: 2px;
 }
 
 @media (min-width: 800px) {
-    .app .formBox {
-        padding: 32px;
-    }
-
     .app .form {
         padding: 16px;
     }
-}
 
-@media (min-width: 1200px) {
-    .app .form {
-        max-width: 1200px;
+    .app .columnLayout {
+        padding-bottom: 16px;
     }
 
-    .app .items {
+    .app .pronunciationBox {
+        padding: 16px 16px 0 16px;
+    }
+}
+
+@media (min-width: 1148px) {
+    .app {
+        padding: 0 32px;
+    }
+
+    .app .form {
+        margin: 32px auto;
+        max-width: 1400px;
+    }
+
+    .app .columns {
         display: flex;
     }
 
-    .app .itemBox {
+    .app .column {
         flex: 1;
     }
 
-    .app .itemBox:first-child {
+    .app .column:first-child .columnLayout {
         padding-right: 8px;
     }
 
-    .app .itemBox:last-child {
+    .app .column:last-child .columnLayout {
         padding-left: 8px;
     }
 }
